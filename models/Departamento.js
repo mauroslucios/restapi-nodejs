@@ -12,4 +12,6 @@ const Departamento = new Schema({
     }
 })
 
-db.model("collection_departamento", Departamento);
+db.model("departamentos", Departamento);
+
+module.exports = Departamento
