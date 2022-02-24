@@ -27,4 +27,5 @@ const Funcionario = new Schema({
 
 })
 
-db.model("colletcion_funcionarios", Funcionarios);
+db.model("funcionarios", Funcionarios);
+module.exports = Funcionario
