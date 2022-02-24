@@ -8,4 +8,5 @@ const TipoFuncionario = new Schema({
     }
 })
 
-db.model("colletcion_tipo_funcionario", TipoFuncionario);
+db.model("tipoFuncionarios", TipoFuncionario)
+module.exports = TipoFuncionario
