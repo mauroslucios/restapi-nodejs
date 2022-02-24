@@ -1,0 +1,34 @@
+{
+  "name": "restapi-nodejs",
+  "version": "1.0.0",
+  "description": "restapi usando nodejs, mongodb, swagger, express e nodemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauroslucios/restapi-nodejs.git"
+  },
+  "keywords": [
+    "mauroslucios",
+    "nodejs",
+    "mongdb",
+    "restapi",
+    "express",
+    "swagger",
+    "nodemon"
+  ],
+  "author": "mauroslucios@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauroslucios/restapi-nodejs/issues"
+  },
+  "homepage": "https://github.com/mauroslucios/restapi-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.3",
+    "nodemon": "^2.0.15"
+  }
+}
