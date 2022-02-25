@@ -27,13 +27,14 @@
   },
   "homepage": "https://github.com/mauroslucios/restapi-nodejs#readme",
   "dependencies": {
+    "body-parser": "^1.19.2",
+    "connect-flash": "^0.1.1",
     "express": "^4.17.3",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
     "mongoose": "^6.2.3",
     "nodemon": "^2.0.15",
-    "body-parser": "^1.19.0",
-    "connect-flash": "^0.1.1",
-    "express-handlebars": "^5.3.3",
-    "express-session": "^1.17.2"
-    
+    "swagger-autogen": "^2.19.0",
+    "swagger-ui-express": "^4.3.0"
   }
 }
