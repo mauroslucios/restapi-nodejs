@@ -4,6 +4,8 @@
 app.js
 bkp/
 node_modules_bkp/
+routes/
+routes/admin/admin.js
 ### Linux ###
 *~
 
