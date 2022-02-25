@@ -4,6 +4,24 @@ const db = require("../database/connection")
 const Departamento = db.model("departamentos");
 const router = express.Router();
 
+router.post('/login',(req,res)=>{
+    try{
+        const{email,password} = req.body;
+
+        if(!(email&&password)){
+            res.status(400).send('Falatndo parâmetros. Você deve informar email e senha');
+        }else{
+            res.status(200).send('Ok');
+        }
+    }catch(error){
+        res.status(500).send('Internal Server Error');
+    }
+})
+
+router.get('/data',(req,res)=>{
+    res.json({title:'Data',content:'Something'});
+})
+
 router.post("/departamento/novo", async (req,res)=>{
     const novoDepartamento = await {
         nome: req.body.nome
