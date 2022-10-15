@@ -4,25 +4,18 @@ const db = require("../database/connection")
 const Departamento = db.model("departamentos");
 const router = express.Router();
 
-router.post('/login',(req,res)=>{
-    try{
-        const{email,password} = req.body;
+router.get('/',(req,res)=>{
+    /*
+    #swagger.description = 'Retorna a rota principal admin'
+    */
 
-        if(!(email&&password)){
-            res.status(400).send('Falatndo parâmetros. Você deve informar email e senha');
-        }else{
-            res.status(200).send('Ok');
-        }
-    }catch(error){
-        res.status(500).send('Internal Server Error');
-    }
-})
-
-router.get('/data',(req,res)=>{
-    res.json({title:'Data',content:'Something'});
+    res.json({title:'Data',content:'HomePage admin'});
 })
 
 router.post("/departamento/novo", async (req,res)=>{
+    /*
+    #swagger.description = 'Cria um departamento novo'
+    */
     const novoDepartamento = await {
         nome: req.body.nome
     }
@@ -34,6 +27,9 @@ router.post("/departamento/novo", async (req,res)=>{
 })
 
 router.get("/departamentos", async (req,res)=>{
+    /*
+    #swagger.description = 'Lista todos os departementos'
+    */
     try{
         const people = await Departamento.find();
         res.status(200).json(people);
@@ -44,6 +40,9 @@ router.get("/departamentos", async (req,res)=>{
 })
 
 router.get("/departamentos/:id", async(req, res)=>{
+    /*
+    #swagger.description = 'Lista um departamento pelo id'
+    */
     const id = req.params.id;
     try{
         const departamento = await Departamento.findOne({_id: id});
@@ -58,6 +57,9 @@ router.get("/departamentos/:id", async(req, res)=>{
 })
 
 router.patch("/departamento/:id", async(req,res)=>{
+    /*
+    #swagger.description = 'Atualiza um único departamento'
+    */
     const id = req.params.id;
     const { nome, dataCadastro } = req.body;
     const departamento = {
