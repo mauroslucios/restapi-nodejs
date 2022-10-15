@@ -11,7 +11,7 @@ const swaggerFile = require('./swagger/swagger_output.json');
     //swagger
     app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
     app.use(express.json());
-    app.use(bodyParser.urlencoded({ extended: false }));
+    //app.use(bodyParser.urlencoded({ extended: false }));
 
     //Public static
     app.use(express.static(path.join(__dirname,"/public")))
@@ -24,6 +24,9 @@ const swaggerFile = require('./swagger/swagger_output.json');
     app.use('/admin', admin);
     
     app.get("/", (req,res)=>{
+        /*
+        #swagger.description = 'Retorna a rota principal da aplicação'
+        */
         res.json({ message: "Hello API"});
     })
 
