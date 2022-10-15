@@ -1,0 +1,7 @@
+- hosts: restapi-nodejs
+  tasks:
+    - name: Instalando o python3, virtualenv
+      apt:
+        pkg:
+          - python3
+          - virtualenv
