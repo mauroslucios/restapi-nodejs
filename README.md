@@ -4,8 +4,17 @@
 - nodejs
 - express
 - mongoose
+- mongodb
 - nodemon
-- docker
+- docker (arquivos docker-compose e Dockerfile já configurados)
+
+### Endpoints
+- admin
+- padrão
+
+### Comandos
+- docker build -t mauroslucios/<name-image>:1.0 .
+- docker-compose up
 
 ### Imagens
 
